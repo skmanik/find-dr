@@ -3,10 +3,6 @@
   flex-grow: 1;
 }
 
-.bob {
-	display: flex;
-}
-
 @media screen and (min-width: 1088px) {
 	.control {
 	  display: flex;

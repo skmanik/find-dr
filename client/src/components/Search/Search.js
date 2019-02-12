@@ -18,14 +18,27 @@ class Search extends Component {
 			return;
 		}
 
-		console.log("Hi! Search clicked!");
+		// do API stuff
+		API.getDoctor(this.state.input)
+			.then((doctor) => {
+				let address = '';
+				address = 
+					doctor.recipient_primary_business_street_address_line1 + " " + 
+					doctor.recipient_city + " " + doctor.recipient_state + " " +
+					doctor.recipient_zip_code + " " + doctor.recipient_country;
+
+				this.props.foundDoctor(address);
+			})
+			.catch((err) => {
+				console.log("ERROR", err)
+			});
 	};
 
 	render() {
 		return(
 			<div>
 				<div className="field">
-					<h1 className="subtitle is-6">Enter the doctor's name like so: <em>First Middle Last</em></h1>
+					<h1 className="subtitle is-6">Enter name space-separated: <em>First Middle Last</em>.</h1>
 				</div>
 				<div className="field has-addons">
 				  <div className="control">

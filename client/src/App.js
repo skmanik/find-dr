@@ -5,11 +5,11 @@ import './App.css';
 
 class App extends Component {
   state = {
-    // state goes here
+    address: '',
   }
 
-  testThisShit() {
-    console.log("Hello!");
+  foundDoctor = doctorAddress => {
+    this.setState({ address: doctorAddress });
   }
 
   render() {
@@ -19,13 +19,11 @@ class App extends Component {
           <div className="hero-body">
             <div className="container">
               <h1 className="title">Find a doctor</h1>
-              <Search />
+              <Search foundDoctor={this.foundDoctor} />
             </div>
           </div>
         </section>
-        <div className="bob">
-          <GoogleMap />
-        </div>
+        <GoogleMap address={this.state.address} />
       </div>
     );
   }
