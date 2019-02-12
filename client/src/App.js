@@ -5,7 +5,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    address: '',
+    address: "Center of the US. Enter a doctor's name.",
   }
 
   foundDoctor = doctorAddress => {
@@ -20,6 +20,7 @@ class App extends Component {
             <div className="container">
               <h1 className="title">Find a doctor</h1>
               <Search foundDoctor={this.foundDoctor} />
+              <h1 className="subtitle is-6 address-updater">Current address: <strong>{this.state.address}</strong></h1>
             </div>
           </div>
         </section>

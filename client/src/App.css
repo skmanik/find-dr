@@ -3,6 +3,10 @@
   flex-grow: 1;
 }
 
+.address-updater {
+	margin-top: 3rem;
+}
+
 @media screen and (min-width: 1088px) {
 	.control {
 	  display: flex;
@@ -13,7 +17,7 @@
 
 @media screen and (min-width: 769px), print {
 	.hero.is-medium .hero-body {
-	    padding-bottom: 5rem;
-	    padding-top: 5rem;
+	    padding-bottom: 2rem;
+	    padding-top: 2rem;
 	}
 }
