@@ -24,6 +24,7 @@ class GoogleMap extends Component {
 	      	}
 
 	      	this.setState({ markerPosition: position });
+	      	this._map.map.setCenter(position);
 	      	console.log(results[0].geometry.location.lat(), results[0].geometry.location.lng());
 	      } else {
 	        console.log('Geocode was not successful for the following reason:', status);
@@ -33,7 +34,7 @@ class GoogleMap extends Component {
 
 	render() {
 		return(
-			<Map google={this.props.google} zoom={4} gestureHandling={'none'} initialCenter={this.state.markerPosition}>
+			<Map google={this.props.google} zoom={6} gestureHandling={'none'} initialCenter={this.state.markerPosition} ref={map => (this._map = map)}>
 				<Marker title={"Doctor's location"} name={"Doctor"} position={this.state.markerPosition} />
 			</Map>
 		);
