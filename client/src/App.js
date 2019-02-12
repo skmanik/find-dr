@@ -5,7 +5,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    address: "Center of the US. Enter a doctor's name.",
+    address: "Center of map. Please enter a doctor's name.",
   }
 
   foundDoctor = doctorAddress => {

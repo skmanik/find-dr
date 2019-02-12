@@ -38,7 +38,7 @@ class Search extends Component {
 		return(
 			<div>
 				<div className="field">
-					<h1 className="subtitle is-6">Enter name space-separated: <em>First Middle Last</em>.</h1>
+					<h1 className="subtitle is-6">Enter name space separated: <em>First Middle Last</em>.</h1>
 				</div>
 				<div className="field has-addons">
 				  <div className="control">
