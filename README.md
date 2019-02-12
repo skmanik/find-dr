@@ -20,7 +20,7 @@ Live site: https://skmanik.github.io/find-dr
 
 ```bash
 $ cd find-dr
-$ npm install
+$ yarn install
 $ yarn start
 ```
 
