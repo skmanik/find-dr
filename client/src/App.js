@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Search from './components/Search';
+import GoogleMap from './components/GoogleMap';
 import './App.css';
 
 class App extends Component {
@@ -17,10 +19,13 @@ class App extends Component {
           <div className="hero-body">
             <div className="container">
               <h1 className="title">Find a doctor</h1>
-              <h2 className="subtitle">Enter the doctor's name to view their location on the map!</h2>
+              <Search />
             </div>
           </div>
         </section>
+        <div className="bob">
+          <GoogleMap />
+        </div>
       </div>
     );
   }

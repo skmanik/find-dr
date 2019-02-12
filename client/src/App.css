@@ -1,0 +1,23 @@
+.control {
+  display: flex;
+  flex-grow: 1;
+}
+
+.bob {
+	display: flex;
+}
+
+@media screen and (min-width: 1088px) {
+	.control {
+	  display: flex;
+	  flex-grow: 1;
+	  max-width: 40%;
+	}
+}
+
+@media screen and (min-width: 769px), print {
+	.hero.is-medium .hero-body {
+	    padding-bottom: 5rem;
+	    padding-top: 5rem;
+	}
+}
