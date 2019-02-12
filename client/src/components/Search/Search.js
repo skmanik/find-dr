@@ -30,7 +30,7 @@ class Search extends Component {
 				this.props.foundDoctor(address);
 			})
 			.catch((err) => {
-				console.log("ERROR", err)
+				alert("Could not find a doctor with that name!");
 			});
 	};
 
